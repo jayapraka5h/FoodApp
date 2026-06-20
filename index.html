@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FoodApp - Order food from your favourite restaurants. Fast delivery at your doorstep.">
+    <title>FoodApp — Order Food Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
+    <script>
+        if (localStorage.getItem('foodapp_theme') === 'light') {
+            document.documentElement.classList.add('light-theme');
+        }
+    </script>
+</head>
+<body>
+    <!-- ─── Navbar ──────────────────────────────────────────────────────── -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <span class="brand-icon">🍔</span>
+            FoodApp
+        </a>
+        <ul class="navbar-nav">
+            <li><a href="src/login.html" class="btn btn-secondary btn-sm">Sign In</a></li>
+            <li><a href="src/register.html" class="btn btn-primary btn-sm">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <!-- ─── Hero Section ───────────────────────────────────────────────── -->
+    <section class="hero" style="padding: 7rem 2rem 5rem;">
+        <div class="hero-tag">🚀 Fast Delivery · Tasty Food · Easy Ordering</div>
+        <h1>
+            Hungry? We've got<br>
+            <span class="highlight">Everything Delicious</span>
+        </h1>
+        <p>Order from the best local restaurants with easy, on-demand delivery right to your doorstep.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; animation: fadeInUp 0.7s ease 0.4s both;">
+            <a href="src/register.html" class="btn btn-primary btn-lg">
+                🍕 Order Now
+            </a>
+            <a href="src/login.html" class="btn btn-secondary btn-lg">
+                Sign In
+            </a>
+        </div>
+    </section>
+
+    <!-- ─── Features ────────────────────────────────────────────────────── -->
+    <section class="container" style="padding: 3rem 1.5rem;">
+        <div class="grid-3 stagger">
+
+            <div class="card" style="text-align:center; padding:2.5rem 2rem;">
+                <div style="font-size:3rem; margin-bottom:1rem;">⚡</div>
+                <h3 style="margin-bottom:8px;">Lightning Fast</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Average delivery time of 30 minutes or less</p>
+            </div>
+
+            <div class="card" style="text-align:center; padding:2.5rem 2rem;">
+                <div style="font-size:3rem; margin-bottom:1rem;">🌟</div>
+                <h3 style="margin-bottom:8px;">Top Restaurants</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Handpicked restaurants with stellar reviews</p>
+            </div>
+
+            <div class="card" style="text-align:center; padding:2.5rem 2rem;">
+                <div style="font-size:3rem; margin-bottom:1rem;">🔒</div>
+                <h3 style="margin-bottom:8px;">Secure Payments</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Safe and encrypted payment processing</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ─── CTA ─────────────────────────────────────────────────────────── -->
+    <section style="padding: 4rem 2rem; text-align:center;">
+        <div class="card" style="max-width:600px; margin:0 auto; padding:3rem; border-color:rgba(255,107,53,0.25);">
+            <div style="font-size:3.5rem; margin-bottom:1rem;">🎉</div>
+            <h2 style="margin-bottom:0.75rem;">Ready to Order?</h2>
+            <p style="color:var(--text-muted); margin-bottom:2rem;">Join thousands of happy customers ordering daily!</p>
+            <a href="src/register.html" class="btn btn-primary btn-lg">
+                Create Free Account
+            </a>
+        </div>
+    </section>
+
+    <!-- ─── Footer ──────────────────────────────────────────────────────── -->
+    <footer style="text-align:center; padding:2rem; color:var(--text-muted); font-size:0.82rem; border-top:1px solid var(--glass-border);">
+        <p>🍔 <strong style="color:var(--accent-orange);">FoodApp</strong> &copy; 2026 · Built with Core Java &amp; Advanced Java</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        // If already logged in, redirect to home.html
+        if (localStorage.getItem('foodapp_active_user')) {
+            window.location.href = 'src/home.html';
+        }
+    </script>
+</body>
+</html>
